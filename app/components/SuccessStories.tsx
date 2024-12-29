@@ -27,14 +27,20 @@ const testimonials: Testimonial[] = [
     author: "Alexander Smith",
     role: "Client",
     avatar: "/avatars/client3.png"
+  },
+  {
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    author: "Alexander Smith",
+    role: "Client",
+    avatar: "/avatars/client4.png"
   }
 ]
 
 export default function SuccessStories() {
   return (
-    <section className="py-16 lg:py-24 bg-white">
+    <section className="py-16 lg:py-24 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center mb-12">
+        <div className="max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">
             Client Success Stories:
             <br />
@@ -48,30 +54,35 @@ export default function SuccessStories() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <div 
-              key={index}
-              className="bg-white p-6 rounded-2xl shadow-lg relative"
-            >
-              <div className="text-[#6953D3] text-5xl absolute top-4 left-4">&ldquo;</div>
-              <p className="text-gray-600 mb-4 pt-8">{testimonial.content}</p>
-              <div className="flex items-center">
-                <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
-                  <Image
-                    src={testimonial.avatar}
-                    alt={testimonial.author}
-                    width={48}
-                    height={48}
-                    className="object-cover"
-                  />
-                </div>
-                <div>
-                  <h4 className="font-medium text-gray-900">{testimonial.author}</h4>
-                  <p className="text-gray-500 text-sm">{testimonial.role}</p>
-                </div>
-              </div>
+        {/* Desktop Layout */}
+        <div className="hidden lg:block relative">
+          <div className="relative flex justify-center min-h-[900px]">
+            {/* First Card - Left Side */}
+            <div className="absolute left-[5%] top-[20%]">
+              <TestimonialCard {...testimonials[0]} />
             </div>
+            
+            {/* Second Card - Right of First Card */}
+            <div className="absolute left-[calc(5%+360px)] top-[10%]">
+              <TestimonialCard {...testimonials[1]} />
+            </div>
+            
+            {/* Third Card - Right Side Top */}
+            <div className="absolute right-[5%] top-0">
+              <TestimonialCard {...testimonials[2]} />
+            </div>
+            
+            {/* Fourth Card - Right Side Bottom */}
+            <div className="absolute right-[5%] bottom-[10%]">
+              <TestimonialCard {...testimonials[3]} />
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile Layout */}
+        <div className="lg:hidden space-y-6 flex flex-col items-center">
+          {testimonials.map((testimonial, index) => (
+            <TestimonialCard key={index} {...testimonial} />
           ))}
         </div>
 
@@ -103,5 +114,43 @@ export default function SuccessStories() {
         </div>
       </div>
     </section>
+  )
+}
+
+// Testimonial Card Component
+function TestimonialCard({ content, author, role, avatar, className = '' }: Testimonial & { className?: string }) {
+  return (
+    <div className={`bg-white p-8 rounded-[20px] relative w-[340px] h-[400px] flex flex-col 
+      shadow-[2px_4px_34.8px_1px_rgba(163,146,191,0.25)] ${className}`}
+    >
+      <div>
+        <div className="text-[#6953D3] absolute top-8 left-8">
+          <Image
+            src="/icons/quote-mark.png"
+            alt="Quote"
+            width={48}
+            height={48}
+            className="object-contain"
+          />
+        </div>
+        <p className="text-gray-600 mt-20 text-[18px] leading-[27px]">{content}</p>
+      </div>
+      
+      <div className="flex items-center mt-auto pt-8 border-t border-gray-100">
+        <div className="w-[52px] h-[52px] rounded-full overflow-hidden mr-4">
+          <Image
+            src={avatar}
+            alt={author}
+            width={52}
+            height={52}
+            className="object-cover"
+          />
+        </div>
+        <div>
+          <h4 className="font-medium text-[18px] text-gray-900">{author}</h4>
+          <p className="text-gray-500 text-[14px]">{role}</p>
+        </div>
+      </div>
+    </div>
   )
 } 
