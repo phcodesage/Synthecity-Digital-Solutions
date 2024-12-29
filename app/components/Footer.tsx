@@ -21,31 +21,28 @@ export default function Footer() {
                 className="object-contain"
               />
             </Link>
-            <div className="mt-8 flex flex-col sm:flex-row gap-8 sm:gap-16 text-center lg:text-left">
+            {/* Links Grid */}
+            <div className="mt-8 w-full grid grid-cols-2 gap-x-4 gap-y-4 sm:gap-8 text-center lg:text-left max-w-md">
               {/* First Column */}
-              <div className="flex flex-col space-y-4">
-                {leftColumnLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="text-[#4A4A4A] hover:text-[#6953D3] transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </div>
+              {leftColumnLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-[#4A4A4A] hover:text-[#6953D3] transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ))}
               {/* Second Column */}
-              <div className="flex flex-col space-y-4">
-                {rightColumnLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="text-[#4A4A4A] hover:text-[#6953D3] transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </div>
+              {rightColumnLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-[#4A4A4A] hover:text-[#6953D3] transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ))}
             </div>
             <Link
               href="/join-us"
@@ -61,7 +58,8 @@ export default function Footer() {
           {/* Right Side */}
           <div className="flex flex-col items-center justify-center h-full">
             <h3 className="text-xl text-[#4A4A4A] mb-8">Contact us here!</h3>
-            <div className="flex flex-wrap justify-center gap-8">
+            {/* Social Icons Grid */}
+            <div className="grid grid-cols-3 sm:grid-cols-6 gap-4 sm:gap-8 w-full max-w-md lg:max-w-none place-items-center">
               {SOCIAL_LINKS.map((link) => (
                 <Link
                   key={link.href}
@@ -88,8 +86,10 @@ export default function Footer() {
       <div className="w-full bg-[#D9D9D9]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-center h-16">
-            <p className="text-[#4A4A4A] text-sm">
-              © 2024 copyrights by SYNTHECITY DIGITAL SOLUTIONS . All Rights Reserved.
+            <p className="text-[#4A4A4A] text-sm text-center px-2">
+              © 2024 copyrights by{' '}
+              <span className="whitespace-nowrap">SYNTHECITY DIGITAL SOLUTIONS</span>
+              {' '}. All Rights Reserved.
             </p>
           </div>
         </div>
