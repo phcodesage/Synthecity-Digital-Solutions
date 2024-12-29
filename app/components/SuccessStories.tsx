@@ -39,7 +39,18 @@ const testimonials: Testimonial[] = [
 export default function SuccessStories() {
   return (
     <section className="py-16 lg:py-24 bg-white relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Background Lines */}
+      <div className="absolute left-0 top-0 w-[300px] h-full opacity-50 pointer-events-none">
+        <Image
+          src="/lines-bg.png"
+          alt="Background Pattern"
+          fill
+          className="object-cover object-left"
+          priority
+        />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">
             Client Success Stories:
@@ -54,16 +65,16 @@ export default function SuccessStories() {
           </p>
         </div>
 
-        {/* Desktop Layout */}
+        {/* Desktop Layout (Large Screens) */}
         <div className="hidden lg:block relative">
           <div className="relative flex justify-center min-h-[900px]">
             {/* First Card - Left Side */}
-            <div className="absolute left-[5%] top-[20%]">
+            <div className="absolute left-[5%] top-[35%]">
               <TestimonialCard {...testimonials[0]} />
             </div>
             
             {/* Second Card - Right of First Card */}
-            <div className="absolute left-[calc(5%+360px)] top-[10%]">
+            <div className="absolute left-[calc(5%+360px)] top-[25%]">
               <TestimonialCard {...testimonials[1]} />
             </div>
             
@@ -79,13 +90,18 @@ export default function SuccessStories() {
           </div>
         </div>
 
-        {/* Mobile Layout */}
-        <div className="lg:hidden space-y-6 flex flex-col items-center">
-          {testimonials.map((testimonial, index) => (
-            <TestimonialCard key={index} {...testimonial} />
-          ))}
+        {/* Tablet/Mobile Layout */}
+        <div className="lg:hidden">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="flex justify-center">
+                <TestimonialCard {...testimonial} />
+              </div>
+            ))}
+          </div>
         </div>
 
+        {/* Contact Section */}
         <div className="mt-16 bg-white rounded-2xl shadow-lg p-8 max-w-3xl mx-auto">
           <h3 className="text-2xl font-bold text-center mb-4">
             Ready to Hire an Expert or Explore Flexible Options?
