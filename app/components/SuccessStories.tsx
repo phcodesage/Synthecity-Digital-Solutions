@@ -51,7 +51,31 @@ export default function SuccessStories() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="max-w-3xl mx-auto mb-12">
+        {/* Desktop Header */}
+        <div className="hidden lg:block absolute left-[5%] -top-72 max-w-[600px] z-10">
+          <h2 className="mb-16">
+            <div className="text-[48px] font-bold text-[#333333] mb-2">
+              Client Success Stories:
+            </div>
+            <div className="text-[40px] font-bold">
+              <div className="bg-gradient-to-r from-[#6953D3] via-[#A14EEE] to-[#F98085] bg-clip-text">
+                <span className="text-transparent">Hear What Our Customers</span>
+              </div>
+              <div className="text-[#6953D3]">
+                Say!
+              </div>
+            </div>
+          </h2>
+          <p className="text-[#444444]/60 text-lg leading-[1.8]">
+            Discover firsthand experiences and glowing feedback from our valued clients. 
+            Our testimonials showcase the impact of our services on businesses like yours. 
+            These client success stories reflect the collaborative partnerships we build 
+            and the tangible results achieved together.
+          </p>
+        </div>
+
+        {/* Mobile/Tablet Header */}
+        <div className="lg:hidden max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">
             Client Success Stories:
             <br />
@@ -67,7 +91,7 @@ export default function SuccessStories() {
 
         {/* Desktop Layout (Large Screens) */}
         <div className="hidden lg:block relative">
-          <div className="relative flex justify-center min-h-[900px]">
+          <div className="relative flex justify-center min-h-[900px] mt-60">
             {/* First Card - Left Side */}
             <div className="absolute left-[5%] top-[35%]">
               <TestimonialCard {...testimonials[0]} />
@@ -102,28 +126,36 @@ export default function SuccessStories() {
         </div>
 
         {/* Contact Section */}
-        <div className="mt-16 bg-white rounded-2xl shadow-lg p-8 max-w-3xl mx-auto">
-          <h3 className="text-2xl font-bold text-center mb-4">
-            Ready to Hire an Expert or Explore Flexible Options?
+        <div className="mt-16 bg-white rounded-2xl p-8 max-w-3xl mx-auto border-2 border-[#444444]/80">
+          <h3 className="text-[32px] font-bold text-center mb-4">
+            Ready to Hire an Expert or Explore
+            <br />
+            Flexible Options?
           </h3>
-          <p className="text-center text-gray-600 mb-6">
+          <p className="text-center text-[#444444]/60 mb-6">
             Let&apos;s assess your requirements and explore the options together to ensure 
             the perfect match for your business success.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <div className="flex-1 w-full max-w-md">
+            <div className="flex-1 w-full max-w-md relative">
               <input
                 type="email"
                 placeholder="Write your email here!"
-                className="w-full px-4 py-2 rounded-full border border-[#6953D3] focus:outline-none focus:ring-2 focus:ring-[#6953D3]"
+                className="w-full px-4 py-2 rounded-full border border-[#6953D3] focus:outline-none focus:ring-2 focus:ring-[#6953D3] pr-24"
               />
+              <button className="absolute right-1 top-1/2 -translate-y-1/2 px-6 py-1.5 bg-[#6953D3] text-white rounded-full hover:bg-[#5842c3] transition-colors text-sm">
+                Submit
+              </button>
             </div>
-            <button className="px-6 py-2 bg-[#6953D3] text-white rounded-full hover:bg-[#5842c3] transition-colors">
-              Submit
-            </button>
-            <span className="text-gray-500">OR</span>
+            <span className="text-[#444444]/60">OR</span>
             <button className="flex items-center gap-2 px-6 py-2 bg-[#6953D3] text-white rounded-full hover:bg-[#5842c3] transition-colors">
-              <span className="material-icons">mail</span>
+              <Image 
+                src="/icons/email-icon.png"
+                alt="Email"
+                width={20}
+                height={20}
+                className="object-contain"
+              />
               Email us!
             </button>
           </div>
