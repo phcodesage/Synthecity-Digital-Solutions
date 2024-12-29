@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "SynthecITy - Digital Solutions",
-  description: "VA and Web Development Solutions",
+  description: "We Transform Ideas into Digital Reality",
 };
 
 export default function RootLayout({
@@ -19,7 +20,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Navbar />
-        {children}
+        <main className="min-h-screen pt-[78px]">{children}</main>
+        <Footer />
       </body>
     </html>
   );
