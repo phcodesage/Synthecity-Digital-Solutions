@@ -1,63 +1,56 @@
-import Image from "next/image";
-import Link from "next/link";
+import HeroSection from '@/app/components/HeroSection'
+import Image from 'next/image'
 
 export default function Home() {
   return (
-    <main className="flex flex-col min-h-screen">
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Elevate Your <span className="text-purple-600">Digital Presence</span> today!
-              </h1>
-              <p className="text-gray-600 mb-8">
-                Comprehensive Virtual Assistant Services and Cutting-Edge Web Development Solutions by Synthecify Digital Solutions
-              </p>
-              <Link 
-                href="/contact"
-                className="px-6 py-3 rounded-full bg-purple-600 text-white hover:bg-purple-700 transition-colors inline-flex items-center"
-              >
-                Get Started
-              </Link>
-            </div>
-            <div className="relative">
+    <main className="flex min-h-screen flex-col">
+      <HeroSection />
+
+      {/* VA and Web Development Section */}
+      <section className="relative -mt-32 py-20">
+        {/* Wave Background */}
+        <div className="absolute inset-0 -top-16 z-10">
+          <Image
+            src="/wave-bg.png"
+            alt="Background wave"
+            fill
+            className="object-cover object-top"
+            priority
+          />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+          <h2 className="text-center mb-16 max-w-[792px] mx-auto h-[175px] flex items-center justify-center whitespace-nowrap">
+            <span className="text-[48px]">
+              <span className="text-[#6953D3]">VA</span> and <span className="text-[#6953D3]">Web Development</span> Solutions
+            </span>
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* VA Services Card */}
+            <div className="rounded-2xl overflow-hidden shadow-lg">
               <Image
-                src="/hero-image.png" // Add your hero image
-                alt="Digital Services Illustration"
-                width={500}
-                height={500}
-                priority
-                className="w-full"
+                src="/va-services.png"
+                alt="Virtual Assistant Services"
+                width={600}
+                height={400}
+                className="w-full object-cover"
+              />
+            </div>
+
+            {/* Web Development Card */}
+            <div className="rounded-2xl overflow-hidden shadow-lg">
+              <Image
+                src="/web-dev.png"
+                alt="Web Development Services"
+                width={600}
+                height={400}
+                className="w-full object-cover"
               />
             </div>
           </div>
         </div>
       </section>
-
-      {/* Services Section */}
-      <section className="py-16 bg-gray-50 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            VA and Web Development Solutions
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-4">Virtual Assistant Services</h3>
-              <p className="text-gray-600">
-                Professional VA services to help manage your business operations efficiently.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-4">Web Development</h3>
-              <p className="text-gray-600">
-                Custom web solutions built with cutting-edge technologies.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
-  );
+  )
 }
