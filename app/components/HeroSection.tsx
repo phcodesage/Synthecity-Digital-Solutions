@@ -8,19 +8,30 @@ export default function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="max-w-xl text-center lg:text-left">
-            <h1 className="text-3xl lg:text-6xl font-bold leading-tight">
-              Elevate <span className="text-[#6953D3]">Your</span>
+            <h1 className="text-[40px] lg:text-[64px] font-bold leading-tight">
+              Elevate{' '}
+              <span className="bg-gradient-to-r from-[#6953D3] via-[#A14EEE] to-[#F98085] bg-clip-text text-transparent"
+                style={{ backgroundSize: '200% 100%', backgroundPosition: '0 0' }}>
+                Your
+              </span>
               <br />
-              <span className="text-[#6953D3]">Digital</span>
+              <span className="bg-gradient-to-r from-[#6953D3] via-[#A14EEE] to-[#F98085] bg-clip-text text-transparent"
+                style={{ backgroundSize: '200% 100%', backgroundPosition: '0 0' }}>
+                Digital
+              </span>
               <br />
-              <span className="text-[#6953D3]">Presence</span> today!
+              <span className="bg-gradient-to-r from-[#6953D3] via-[#A14EEE] to-[#F98085] bg-clip-text text-transparent"
+                style={{ backgroundSize: '200% 100%', backgroundPosition: '0 0' }}>
+                Presence
+              </span>{' '}
+              today!
             </h1>
-            <p className="mt-4 lg:mt-6 text-gray-600 text-base lg:text-lg">
+            <p className="mt-4 lg:mt-6 text-[#333333]/60 text-base lg:text-lg">
               Welcome to SYNTHECITY Digital Solutions. We Transform Ideas into Digital Reality
             </p>
             <Link
               href="/contact"
-              className="mt-6 lg:mt-8 inline-flex px-6 lg:px-8 py-3 lg:py-4 rounded-full bg-[#FF6B6B] text-white font-medium hover:bg-[#FF5252] transition-colors duration-200"
+              className="mt-8 lg:mt-10 inline-flex px-10 py-5 rounded-full bg-[#FF6B6B] text-white text-xl font-medium hover:bg-[#FF5252] transition-colors duration-200"
             >
               Explore Now!
             </Link>
