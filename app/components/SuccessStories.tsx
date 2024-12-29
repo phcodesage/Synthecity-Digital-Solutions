@@ -54,7 +54,7 @@ export default function SuccessStories() {
               key={index}
               className="bg-white p-6 rounded-2xl shadow-lg relative"
             >
-              <div className="text-[#6953D3] text-5xl absolute top-4 left-4">"</div>
+              <div className="text-[#6953D3] text-5xl absolute top-4 left-4">&ldquo;</div>
               <p className="text-gray-600 mb-4 pt-8">{testimonial.content}</p>
               <div className="flex items-center">
                 <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
@@ -80,7 +80,7 @@ export default function SuccessStories() {
             Ready to Hire an Expert or Explore Flexible Options?
           </h3>
           <p className="text-center text-gray-600 mb-6">
-            Let's assess your requirements and explore the options together to ensure 
+            Let&apos;s assess your requirements and explore the options together to ensure 
             the perfect match for your business success.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
