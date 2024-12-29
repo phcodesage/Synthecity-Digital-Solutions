@@ -7,7 +7,7 @@ export default function Home() {
       <HeroSection />
 
       {/* VA and Web Development Section */}
-      <section className="relative -mt-32 py-20">
+      <section className="relative -mt-16 lg:-mt-32 py-12 lg:py-20">
         {/* Wave Background */}
         <div className="absolute inset-0 -top-16 z-10">
           <Image
@@ -20,13 +20,13 @@ export default function Home() {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-          <h2 className="text-center mb-16 max-w-[792px] mx-auto h-[175px] flex items-center justify-center whitespace-nowrap">
-            <span className="text-[48px]">
+          <h2 className="text-center mb-8 lg:mb-16 max-w-[792px] mx-auto h-[100px] lg:h-[175px] flex items-center justify-center">
+            <span className="text-[32px] lg:text-[48px] whitespace-normal lg:whitespace-nowrap">
               <span className="text-[#6953D3]">VA</span> and <span className="text-[#6953D3]">Web Development</span> Solutions
             </span>
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
             {/* VA Services Card */}
             <div className="rounded-2xl overflow-hidden shadow-lg">
               <Image
