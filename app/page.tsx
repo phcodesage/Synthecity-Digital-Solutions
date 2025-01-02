@@ -1,4 +1,6 @@
 import HeroSection from '@/app/components/HeroSection'
+import ServicesSection from '@/app/components/ServicesSection'
+import PortfolioSection from '@/app/components/PortfolioSection'
 import Image from 'next/image'
 
 export default function Home() {
@@ -51,6 +53,12 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Services Section */}
+      <ServicesSection />
+
+      {/* Portfolio Section */}
+      <PortfolioSection />
     </main>
   )
 }
