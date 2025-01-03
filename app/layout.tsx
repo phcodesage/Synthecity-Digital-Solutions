@@ -18,14 +18,22 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const isProduction = process.env.NODE_ENV === 'production'
+
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar />
-        <main className="min-h-screen pt-[78px]">{children}</main>
-        <SuccessStories />
-        <LatestBlogsSection />
-        <Footer />
+        {!isProduction && <Navbar />}
+        {isProduction ? (
+          children
+        ) : (
+          <>
+            <main className="min-h-screen pt-[78px]">{children}</main>
+            <SuccessStories />
+            <LatestBlogsSection />
+            <Footer />
+          </>
+        )}
       </body>
     </html>
   );

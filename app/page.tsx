@@ -4,6 +4,27 @@ import PortfolioSection from '@/app/components/PortfolioSection'
 import Image from 'next/image'
 
 export default function Home() {
+  // Check if we're in production
+  const isProduction = process.env.NODE_ENV === 'production'
+
+  if (isProduction) {
+    return (
+      <main className="flex min-h-screen items-center justify-center bg-[#F9F4F4]">
+        <div className="text-center px-4">
+          <h1 className="text-[48px] font-bold mb-6">
+            <span className="bg-gradient-to-r from-[#6953D3] via-[#A14EEE] to-[#F98085] bg-clip-text text-transparent">
+              Coming Soon!
+            </span>
+          </h1>
+          <p className="text-[#444444] text-[22px] font-medium font-inter max-w-[600px]">
+            We are working hard to bring you something amazing. Stay tuned!
+          </p>
+        </div>
+      </main>
+    )
+  }
+
+  // Development view with all components
   return (
     <main className="flex min-h-screen flex-col">
       <HeroSection />
