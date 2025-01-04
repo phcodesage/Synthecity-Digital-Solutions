@@ -1,5 +1,6 @@
 import HeroSection from '@/app/components/HeroSection'
 import ServicesSection from '@/app/components/ServicesSection'
+import StreamlinedSection from '@/app/components/StreamlinedSection'
 import PortfolioSection from '@/app/components/PortfolioSection'
 import Image from 'next/image'
 
@@ -77,6 +78,9 @@ export default function Home() {
 
       {/* Services Section */}
       <ServicesSection />
+
+      {/* Streamlined Section */}
+      <StreamlinedSection />
 
       {/* Portfolio Section */}
       <PortfolioSection />
