@@ -79,6 +79,65 @@ export default function Home() {
       {/* Services Section */}
       <ServicesSection />
 
+      {/* VA Services Section */}
+      <section className="py-20 bg-white relative overflow-hidden">
+        {/* Left Background Lines */}
+        <div className="absolute left-0 top-0 w-[600px] h-full opacity-50 pointer-events-none">
+          <Image
+            src="/lines-bg-left.png"
+            alt="Background Pattern Left"
+            fill
+            className="object-cover object-left"
+            priority
+          />
+        </div>
+
+        {/* Right Background Lines */}
+        <div className="absolute right-0 top-0 w-[600px] h-full opacity-50 pointer-events-none">
+          <Image
+            src="/lines-bg-right.png"
+            alt="Background Pattern Right"
+            fill
+            className="object-cover object-right"
+            priority
+          />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Content - Image */}
+            <div className="relative h-[500px]">
+              <Image
+                src="/va-illustration.png"
+                alt="Virtual Assistant Services"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+
+            {/* Right Content */}
+            <div>
+              <h2 className="text-[40px] font-bold text-[#333333] mb-6">
+                Outsource Your Success: Synthecity's Premier{' '}
+                <span className="bg-gradient-to-r from-[#6953D3] via-[#A14EEE] to-[#F98085] bg-clip-text text-transparent">
+                  Virtual Assistant Solutions
+                </span>
+              </h2>
+              
+              <div className="bg-[#F8F5FF] rounded-[20px] p-8">
+                <p className="text-[#444444] text-lg">
+                  Synthecity specializes in providing premier outsourced virtual 
+                  assistant solutions. Hire skilled and dedicated virtual assistants 
+                  through us to optimize your operations, reduce costs, and achieve 
+                  unparalleled business success.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Streamlined Section */}
       <StreamlinedSection />
 
