@@ -21,8 +21,8 @@ export default function RootLayout({
   const isProduction = process.env.NODE_ENV === 'production'
 
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" className="smooth-scroll">
+      <body className={`${inter.className} smooth-scroll`}>
         {!isProduction && <Navbar />}
         {isProduction ? (
           children

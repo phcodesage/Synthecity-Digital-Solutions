@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --foreground: #171717;
   --background: #ffffff;
@@ -12,6 +16,14 @@ body {
   background: var(--background);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.smooth-scroll {
+  scroll-behavior: smooth;
+  transition: all 0.5s ease-in-out;
 }
 
 .text-balance {
