@@ -119,7 +119,7 @@ export default function Home() {
             {/* Right Content */}
             <div>
               <h2 className="text-[40px] font-bold text-[#333333] mb-6">
-                Outsource Your Success: Synthecity's Premier{' '}
+                Outsource Your Success: Synthecity&apos;s Premier{' '}
                 <span className="bg-gradient-to-r from-[#6953D3] via-[#A14EEE] to-[#F98085] bg-clip-text text-transparent">
                   Virtual Assistant Solutions
                 </span>

@@ -12,7 +12,7 @@ export default function StreamlinedSection() {
             </span>
           </h2>
           <p className="text-[#444444] text-lg">
-            Synthecity's Integrated Virtual Assistant Solutions and Dynamic Web Development Services
+            Synthecity&apos;s Integrated Virtual Assistant Solutions and Dynamic Web Development Services
           </p>
         </div>
 
