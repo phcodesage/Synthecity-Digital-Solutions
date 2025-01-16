@@ -18,16 +18,9 @@ export default function ServicesSection() {
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left Content */}
-          <div>
-            <p className="text-[#444444] text-lg mb-8">
-              Empower your business with our diverse expertise in
-              virtual assistant services and top-tier web development
-              solutions. Synthecity Digital Solutions offers a pioneering
-              suite of services delivered by experts in their respective
-              fields.
-            </p>
-
-            <div className="space-y-8">
+          <div className="flex flex-col justify-center min-h-[600px]">
+            {/* Check Items Container */}
+            <div className="space-y-16">
               <div className="flex items-start gap-6">
                 <div className="w-[100px] h-[100px] flex-shrink-0">
                   <Image
