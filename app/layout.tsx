@@ -28,7 +28,7 @@ export default function RootLayout({
           children
         ) : (
           <>
-            <main className="min-h-screen pt-[78px]">{children}</main>
+            <main className="min-h-screen">{children}</main>
             <SuccessStories />
             <LatestBlogsSection />
             <Footer />
